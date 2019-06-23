@@ -11,18 +11,16 @@
 	<title>Kino-Search</title>
 </head>
 <body>
-<nav class="navbar">
-	<div class="container">
-		<a href="index.html" class="navbar-brand">Kino-Search</a>
-	</div>
-</nav>
-<div class="container">
-	<div class="jumbotron">
-		<h3 class="text-center">Пошук фільмів</h3>
-		<form id="search-form">
-			<input type="text" class="form-control" id="search-text" placeholder="Введіть назву фільму">
+<div class="container-fluid">
+	<nav class="navbar navbar-dark bg-dark justify-content-between mb-4">
+		<a href="index.html" class="navbar-brand">Movie-Search</a>
+		<form id="search-form" class="form-inline text-center">
+			<input type="search" class="form-control mr-sm-2" id="search-text"
+			       placeholder="Введіть назву фільму..." aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		</form>
-	</div>
+		<h4 class="text-right" style="color: #fff;">Пошук Фільмів</h4>
+	</nav>
 </div>
 <div class="container">
 	<div id="movies" class="row"></div>
