@@ -93,9 +93,9 @@ function addEventMedia() {
 function showFullInfo() {
     let url = '';
     if (this.dataset.type === 'movie') {
-        url = `http://api.themoviedb.org/3/movie/${this.dataset.id}?api_key=efea5188a7f43aa1303c12cb1ad8a604&language=ru`
+        url = `https://api.themoviedb.org/3/movie/${this.dataset.id}?api_key=efea5188a7f43aa1303c12cb1ad8a604&language=ru`
     } else if (this.dataset.type === 'tv') {
-        url = `http://api.themoviedb.org/3/tv/${this.dataset.id}?api_key=efea5188a7f43aa1303c12cb1ad8a604&language=ru`
+        url = `https://api.themoviedb.org/3/tv/${this.dataset.id}?api_key=efea5188a7f43aa1303c12cb1ad8a604&language=ru`
     } else {
         outPage.innerHTML = '<h2 class="col-12 text-center text-danger">' +
             'Виникла помилка, спробуйте пізніше.</h2>';
@@ -135,7 +135,7 @@ function showFullInfo() {
 }
 
 document.addEventListener('DOMContentLoaded',() => {
-    fetch('http://api.themoviedb.org/3/trending/all/week?api_key=efea5188a7f43aa1303c12cb1ad8a604&language=ru')
+    fetch('https://api.themoviedb.org/3/trending/all/week?api_key=efea5188a7f43aa1303c12cb1ad8a604&language=ru')
         .then((value) => {
             if (value.status !== 200) {
                 return Promise.reject(value.status);
